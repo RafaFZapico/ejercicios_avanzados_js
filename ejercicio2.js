@@ -42,9 +42,9 @@ let m
 let position = 0
 for (const i of users) {
   //m = i.favoritesSounds
-  console.log('----------', i.name) // aparececen cada uno de los objetos:{name: 'Alberto',..........} que componen el arrray users.
+  //console.log('----------', i.name) // aparececen cada uno de los objetos:{name: 'Alberto',..........} que componen el arrray users.
   for (const k in i.favoritesSounds) {
-    console.log(k) // waves, rain, firecamp......
+    //console.log(k) // waves, rain, firecamp......
     // Hasta aquí funciona el código.
     // m = k
     // console.log('m vale', m)
@@ -57,12 +57,24 @@ for (const i of users) {
     }*/
     //console.log(k.volume)
     // count++
-    console.log('la clave es: ', i.favoritesSounds[k].volume)
+    // console.log('la clave es: ', i.favoritesSounds[k].volume)
     volumes[j] = i.favoritesSounds[k].volume
     j++
   }
-  console.log(volumes)
 }
+console.log(volumes)
+// sumamos todos los valores de la clave volumen
+let tot = 0
+let i = 0
+while (i < volumes.length) {
+  tot = tot + volumes[i]
+  i++
+}
+console.log(tot)
+console.log(
+  'La media de volumen de todos los volúmenes es:',
+  tot / volumes.length
+)
 // con este códigoconsole.log(i.favoritesSounds.k) da undefined
 //[i[favoritesSounds]][volume]
 //console.log('volumes= ', volumes)
