@@ -46,5 +46,23 @@ const food = [
   'beer',
   'beer'
 ]
-//const food = ['ketchup', 'pizza', 'chicken', 'pizza']
+
 removeItem(food, 'beer')
+/*El listado queda de la siguiente manera:  [
+  'ketchup',     'ketchup',
+  'sushi',       'pizza',
+  'burger',      'potatoe',
+  'pasta',       'ice-cream',
+  'pizza',       'chicken',
+  'onion rings', 'pasta',
+  'soda'
+]*/
+removeItem(food, 'pizza')
+/*El listado queda de la siguiente manera:  [
+  'ketchup',     'ketchup',
+  'sushi',       'burger',
+  'potatoe',     'pasta',
+  'ice-cream',   'chicken',
+  'onion rings', 'pasta',
+  'soda'
+]*/

@@ -16,7 +16,6 @@ function swap(list, index1, index2) {
   index[0] = index1
   index[1] = index2
   index.sort()
-  console.log('las posiciones a cambiar son :', index)
   let m = 0
   const changes = []
   // en listsort iremos anotando los cambios
@@ -24,47 +23,38 @@ function swap(list, index1, index2) {
   // anotamos en el array changes los dos elementos que se sustituirán
   changes[0] = list[index[0] - 1]
   changes[1] = list[index[1] - 1]
-  console.log('los cambios son: ', changes)
+  console.log(
+    'Los cambios que se realizarán son:',
+    changes[0],
+    'en la posición:',
+    index[0],
+    'y',
+    changes[1],
+    'en la posición:',
+    index[1]
+  )
   //? Hasta aquí el código funciona correctamente.
   // recorremos list para ir anotando en listsort los elementos
   let vfor = 1
-  let listsortaux = listsort
   for (const i of list) {
     if (i === changes[0]) {
       listsort[k] = changes[1]
-      console.log('primer cambio', listsort)
       listsort[index[1] - 1] = changes[0]
-      console.log('segundo cambio', listsort)
-      console.log('El listado listsort es:  ', listsort)
-      console.log('longitud del array listsort', listsort.length)
-      console.log('aux es:', listsortaux)
-
       // Hasta aquí hace bien los cambios.
-    } else if (
-      i !== changes[0] &&
-      i !== changes[1]
-      //listsort[k] === changes[1]
-    ) {
+    } else if (i !== changes[0] && i !== changes[1]) {
       listsort[k] = i
-      console.log('si no hay que cambiar, el listado queda así.', listsort)
     }
-
     k++
-    console.log('La variable k vale:', k)
-    console.log('vuelta completa del bucle for que recorre list', vfor)
-    console.log('-----------------------------------------------------------')
-    vfor++
-    /*if (k === list.length) {
-      return
-    }*/
   }
-  /*for (let i = 0; i < listsortaux.length; i++) {
-    if (typeof listsortaux[i] === undefined) {
-      listsortaux.splice(i, 1)
-    }
-  }*/
-  console.log('longitud del auxiliar:', listsortaux.length)
   console.log('El listado modificado queda así: ', listsort)
 } // fin de la función swap
 // Llamada a la función swap
-swap(fantasticFour, 3, 4)
+swap(fantasticFour, 3, 2)
+/*Los cambios que se realizarán son: Mr. Fantástico en la posición: 2 y La mujer invisible en la posición: 3
+El listado modificado queda así:  [
+  'La antorcha humana',
+  'La mujer invisible',
+  'Mr. Fantástico',
+  'La cosa'
+]
+*/

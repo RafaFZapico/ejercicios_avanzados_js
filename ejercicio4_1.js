@@ -5,7 +5,6 @@ function findArrayIndex(array, text) {
   //Tu codigo
   let index = 1
   for (const i of array) {
-    //console.log(i)
     if (i === text) {
       console.log('El texto se encuentra en la ', index + 'ª posición.')
     }

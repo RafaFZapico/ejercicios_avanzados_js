@@ -84,7 +84,7 @@ for (const i of users) {
     }
   }
 }
-//console.log(cwaves, crain, cfirecamp)
+
 // Declaramos el objeto que recogerá la cantidad de veces que un sonido es elegido por los distintos usuarios.
 let countfavoritesound = {
   waves: cwaves,
@@ -102,3 +102,10 @@ for (const i in countfavoritesound) {
     countfavoritesound[i]
   )
 }
+/*El número de veces que es elegido el sonido  waves es de:  3
+El número de veces que es elegido el sonido  rain es de:  1
+El número de veces que es elegido el sonido  firecamp es de:  3
+El número de veces que es elegido el sonido  shower es de:  2
+El número de veces que es elegido el sonido  train es de:  2
+El número de veces que es elegido el sonido  window es de:  1
+*/

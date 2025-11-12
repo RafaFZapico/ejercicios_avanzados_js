@@ -41,28 +41,12 @@ let j = 0
 let m
 let position = 0
 for (const i of users) {
-  //m = i.favoritesSounds
-  //console.log('----------', i.name) // aparececen cada uno de los objetos:{name: 'Alberto',..........} que componen el arrray users.
   for (const k in i.favoritesSounds) {
-    //console.log(k) // waves, rain, firecamp......
-    // Hasta aquí funciona el código.
-    // m = k
-    // console.log('m vale', m)
-    /*for (const l in i.favoritesSounds) {
-      // con el for (const l in i.favoritesSounds[k] me muestra las claver:"format" y "volume" de cada objeto de favoriteSounds
-      //console.log('la clave es: ', i.favoritesSounds[k]) // me muestra 24 líneas como esta: la clave es:  { format: 'mp3', volume: 50 }
-      console.log('la clave es: ', l) // me muestra 24 líneas como estas:la clave es:  format // la clave es:  volume
-      // console.log('la clave es: ', i.favoritesSounds[k].volume) // me muestra 24 líneas como esta: la clave es:  50
-      position++
-    }*/
-    //console.log(k.volume)
-    // count++
-    // console.log('la clave es: ', i.favoritesSounds[k].volume)
     volumes[j] = i.favoritesSounds[k].volume
     j++
   }
 }
-console.log(volumes)
+console.log('los volumenes recopilados son:', volumes)
 // sumamos todos los valores de la clave volumen
 let tot = 0
 let i = 0
@@ -70,11 +54,9 @@ while (i < volumes.length) {
   tot = tot + volumes[i]
   i++
 }
-console.log(tot)
+console.log('La suma total es:', tot)
+// Hallamos el valor promedio.
 console.log(
-  'La media de volumen de todos los volúmenes es:',
+  'La media de volumen de todos los valores es:',
   tot / volumes.length
 )
-// con este códigoconsole.log(i.favoritesSounds.k) da undefined
-//[i[favoritesSounds]][volume]
-//console.log('volumes= ', volumes)

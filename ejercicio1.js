@@ -30,27 +30,19 @@ const movies = [
 let k = 0
 let typecategorie = []
 for (const i of movies) {
-  //console.log(i)
-  //console.log(i.categories)
   for (const m of i.categories) {
-    //console.log(m)
     typecategorie[k] = m
     k++
   }
 }
-console.log(typecategorie)
-
-//Hasta aquí el código funciona correctamente.
 // Quitar duplicados usando el métdodo .includes()
 for (let i = 0; i < typecategorie.length; i++) {
   m = typecategorie[i]
-  console.log('m vale: ', m)
-  //let j = 1
   for (let j = i + 1; j < typecategorie.length; j++) {
     if (typecategorie[j].includes(m)) {
       typecategorie.splice(j, 1)
-      console.log(typecategorie)
     }
   }
 }
-console.log(typecategorie)
+console.log('las categorías son: ', typecategorie)
+//las categorías son:  [ 'comedia', 'aventura', 'acción', 'thriller', 'animación' ]
